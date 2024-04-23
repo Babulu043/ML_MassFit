@@ -1,0 +1,37 @@
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c      written by the UFO converter
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+mass 6 mdl_MT
+
+mass 23 mdl_MZ
+
+mass 25 mdl_MH
+
+mass 32 mdl_MZp
+
+mass 34 mdl_MWp
+
+sminputs 1 aEWM1
+
+sminputs 2 mdl_Gf
+
+sminputs 3 aS
+
+ssmcoup 1 mdl_kL
+
+ssmcoup 2 mdl_kR
+
+yukawa 6 mdl_ymt
+
+decay 6 mdl_WT
+
+decay 23 mdl_WZ
+
+decay 24 mdl_WW
+
+decay 25 mdl_WH
+
+decay 32 mdl_WZp
+
+decay 34 mdl_WWp
