@@ -11,7 +11,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from root_numpy import array2root
 
-data = makedataset('W2LNu10000Events_13Tev.root')
+data = makedataset('/Users/babulu/Downloads/train_2_7TeV.root')
 X_train,X_val = data.training_df,data.validation_df
 y_train,y_val = data.label_df,data.val_label_df
 X_star  = data.testing_df
