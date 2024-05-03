@@ -9,9 +9,9 @@ import os
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-from root_numpy import array2root
+from awkward import array2root
 
-data = makedataset('W2LNu10000Events_13Tev.root')
+data = makedataset('/Users/babulu/Downloads/train_2_7TeV.root')
 X_train,X_val = data.training_df,data.validation_df
 y_train,y_val = data.label_df,data.val_label_df
 X_star  = data.testing_df
@@ -79,7 +79,7 @@ elif(sys.argv[1] == 'do_predict'):
     fig2,ax2 = plt.subplots()
     ax2.hist(pred,50)
     fig2.savefig("fitted_mass.png")
-    filename = '../data/W2LNu10000Events_13Tev_new.root',
+    filename = '../data/train_2_7TeV.root',
     #leaf = zip(recopz,recoE)
     # leaf_l = list(zip(y_pred))
     # branch = np.array(leaf_l,dtype=[('reco_mass','float32')])
