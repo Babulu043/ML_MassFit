@@ -9,7 +9,7 @@ import os
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-from root_numpy import array2root
+from uproot import array2root
 
 data = makedataset('/Users/babulu/Downloads/train_2_7TeV.root')
 X_train,X_val = data.training_df,data.validation_df
@@ -69,7 +69,7 @@ model = build_model(hlayer_outline,input_shapes=[input_dim])
 model.summary()
 model_dir = '../data/'
 if(sys.argv[1] == 'do_train'):
-    fit_model = model.fit(X_train_tr,y_train_tr,epochs=500,batch_size =128,validation_data=(X_val_tr,y_val_tr))#,callbacks=[keras.callbacks.EarlyStopping(patience=10)])
+    fit_model = model.fit(X_train_tr,y_train_tr,epochs=100,batch_size =128,validation_data=(X_val_tr,y_val_tr))#,callbacks=[keras.callbacks.EarlyStopping(patience=10)])
     model.save(model_dir+'GANinput_model.h5')
     plot_loss(fit_model)
 elif(sys.argv[1] == 'do_predict'):
@@ -79,7 +79,7 @@ elif(sys.argv[1] == 'do_predict'):
     fig2,ax2 = plt.subplots()
     ax2.hist(pred,50)
     fig2.savefig("fitted_mass.png")
-    filename = '../data/W2LNu10000Events_13Tev_new.root',
+    filename = '../Users/babulu/Downloads/train_2_7TeV.root',
     #leaf = zip(recopz,recoE)
     # leaf_l = list(zip(y_pred))
     # branch = np.array(leaf_l,dtype=[('reco_mass','float32')])
