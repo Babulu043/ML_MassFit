@@ -9,7 +9,7 @@ import os
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-from uproot import array2root
+from ROOT import array2root
 
 data = makedataset('/Users/babulu/Downloads/train_2_7TeV.root')
 X_train,X_val = data.training_df,data.validation_df
