@@ -1,7 +1,8 @@
 import ROOT
+import uproot
 import numpy as np
 from numpy import testing
-from root_numpy import root2array, rec2array, array2root, tree2array
+from uproot import root2array, rec2array, array2root, tree2array
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
